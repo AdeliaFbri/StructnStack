@@ -9,3 +9,7 @@ typedef struct{
     ItemType Item[MAXSTACK];
     int Count;
 }Stack;
+
+void InitializeStack(Stack *S){
+    S->Count = 0;
+}
