@@ -21,3 +21,21 @@ int Full(Stack *S){
 int Empty(Stack *S){
     return (S->Count == 0);
 }
+
+void Pop(Stack *S, ItemType *x){
+    if(Empty(S)){
+        cout <<"Stack masih kosong!" << endl;
+    }else{
+        --S->Count;
+        *x=S->Item[S->Count];
+    }
+}
+
+void Push(ItemType x, Stack *S){
+    if(Full(S)){
+        cout <<"Stack penuh! Data tidak dapat masuk!" <<endl;
+    }else{
+        S->Item[S->Count] = x;
+        S->Count++;
+    }
+}
