@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+#define MAXSTACK 5
+
+typedef int ItemType;
+
+/* Definisi struktur stack */
+typedef struct{
+    ItemType Item[MAXSTACK];
+    int Count;
+}Stack;
