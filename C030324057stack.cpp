@@ -17,3 +17,7 @@ void InitializeStack(Stack *S){
 int Full(Stack *S){
     return (S->Count == 0);
 }
+
+int Empty(Stack *S){
+    return (S->Count == 0);
+}
