@@ -26,8 +26,8 @@ void Pop(Stack *S, ItemType *x){
     if(Empty(S)){
         cout <<"Stack masih kosong!" << endl;
     }else{
-        --S->Count;
-        *x=S->Item[S->Count];
+        S->Count--;
+        *x = S->Item[S->Count];
     }
 }
 
@@ -38,4 +38,21 @@ void Push(ItemType x, Stack *S){
         S->Item[S->Count] = x;
         S->Count++;
     }
+}
+
+/* Uji Coba */
+int main(){
+    Stack S;
+    InitializeStack(&S);
+
+    Push(1, &S);
+    Push(2, &S);
+    Push(3, &S);
+    Push(4, &S);
+
+    int value;
+    Pop(&S, &value);
+    cout << "Data yang ditampilkan:" << value <<endl;
+
+    return 0;
 }
