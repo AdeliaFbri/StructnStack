@@ -3,24 +3,25 @@
 using namespace std;
 
 struct mahasiswa{
-    string nama;
-    string nim;
-    string alamat;
-    float ipk;
+    string Nama;
+    string Nim;
+    string Alamat;
+    float IPK;
 };
 
 int main(){
-mahasiswa adel;
+    mahasiswa Adel;
+    mahasiswa* ptr = &Adel;
 
-adel.nama="Adelia Febriani";
-adel.nim="C030324057";
-adel.alamat="Jl. Purnasakti";
-adel.ipk=3.6;
+    ptr->Nama = "Adelia Febriani";
+    ptr->Nim = "C030324057";
+    ptr->Alamat = "Jl. Purnasakti";
+    ptr->IPK = 3.6;
 
-cout<< adel.nama<<"\n";
-cout<< adel.nim<<"\n";
-cout<< adel.alamat<<"\n";
-cout<< adel.ipk<<"\n";
+    cout << ptr->Nama << "\n";
+    cout << ptr->Nim << "\n";
+    cout << ptr->Alamat << "\n";
+    cout << ptr->IPK << "\n";
 
 getch();
 return 0;
